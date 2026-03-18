@@ -220,6 +220,16 @@ header {
     font-size: 1.75rem;
   }
 }
+/* PROJECTS */
+.section-project {
+  background-color: #050815;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+.section-project .img-project {
+  width: 35%;
+}
+
 /* FUSEE */
 .animate-fusee {
   transition: all 1s ease;
