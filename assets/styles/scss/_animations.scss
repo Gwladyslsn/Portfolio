@@ -1,0 +1,56 @@
+/* FUSEE */
+
+.animate-fusee {
+    transition: all 1s ease;
+    display: inline-block;
+
+    &:hover {
+        animation: moveFusee 2s ease-in-out forwards;
+    }
+
+    picture.emoji-gif {
+        img {
+            width: 1em;
+            height: 1em;
+        }
+    }
+}
+
+@keyframes moveFusee {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translate(150px, -150px);
+    }
+
+    50% {
+        transform: translate(300px, -300px);
+    }
+
+    75% {
+        transform: translate(750px, -750px);
+    }
+
+    100% {
+        transform: translate(1500px, -1500px);
+        opacity: 0;
+    }
+}
+
+/* TERMINAL*/
+@keyframes green-color {
+    0% {
+        color: #2a7151;
+    }
+
+    50% {
+        color: #46cf79;
+    }
+
+    100% {
+        color: #2a7151;
+    }
+}
