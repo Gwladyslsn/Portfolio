@@ -1,0 +1,124 @@
+/* TERMINAL */
+
+.terminal-container {
+  background-color: #101729;
+  border-radius: 10px;
+  border: 1px solid #1a222f;
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+  max-width: 400px;
+  font-family: "Courier New", monospace;
+
+
+  .top-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #212b3f;
+    padding-bottom: 10px;
+  }
+
+  .main-side {
+    padding: 15px 20px;
+  }
+
+
+  .red-circle,
+  .yellow-circle,
+  .green-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 7px;
+  }
+
+  .red-circle {
+    background-color: #ef4444;
+  }
+
+  .yellow-circle {
+    background-color: #eab308;
+  }
+
+  .green-circle {
+    background-color: #22c55e;
+    margin-right: 15px;
+  }
+
+
+  .terminal-title {
+    color: #fff;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+
+  .line {
+    color: #fff;
+    padding-left:10px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .dollar {
+    color: #2282f4;
+    margin-right: 15px;
+    font-weight: bold;
+  }
+
+
+  .green-line {
+    color: #46cf79;
+    margin-bottom: 12px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .line-1 {
+    animation: green-color 4s infinite;
+  }
+
+  .line-2 {
+    animation: green-color 4s infinite;
+  }
+
+  .line-3 {
+    animation: green-color 4s infinite;
+  }
+
+  .line-4 {
+    animation: green-color 3.5s infinite;
+  }
+}
+
+/* Animations */
+@keyframes green-color {
+  0% {
+    color: #2a7151;
+  }
+
+  50% {
+    color: #46cf79;
+  }
+
+  100% {
+    color: #2a7151;
+  }
+}
+
+
+
+
+
+
+
