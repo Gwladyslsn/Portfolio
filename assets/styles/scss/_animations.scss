@@ -8,13 +8,15 @@
         animation: moveFusee 2s ease-in-out forwards;
     }
 
-    picture.emoji-gif {
+    
+}
+
+picture.emoji-gif {
         img {
             width: 1em;
             height: 1em;
         }
     }
-}
 
 @keyframes moveFusee {
     0% {
