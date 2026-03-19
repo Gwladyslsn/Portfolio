@@ -1,58 +1,72 @@
 <!DOCTYPE html>
-<html lang="en-FR">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <meta name="Description" content="Consulter le portfolio de Gwladys" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="/assets/styles/css/main.css">
     <title>Portfolio de Gwladys Laisné</title>
 </head>
 
 <body>
     <!-- HEADER -->
-    <header class="d-flex flex-wrap align-items-center justify-content-around pt-2 pb-3 border-bottom bg">
-        <div class="col-md-3 mb-4">
-            <a href=href="../Portfolio/index.html" class="d-inline-flex text-decoration-none text-white">
+    <header class="d-flex flex-wrap align-items-center justify-content-between pt-3 pb-3">
+        <div class="col-md-3 mb-md-0 mb-3">
+            <a href="#section-home" class="d-inline-flex text-decoration-none text-white fs-5 fw-500">
                 Gwladys Laisné
             </a>
         </div>
-        <nav class="navbar navbar-expand-lg">
-            <ul class="nav col-12 col-md-auto mb-4 justify-content-center">
-                <li><a href="#" class="text-white nav-link px-4">Présentation</a></li>
-                <li><a href="#" class="text-white nav-link px-4">Compétences</a></li>
-                <li><a href="#" class="text-white nav-link px-4">Projets</a></li>
-                <li><a href="#" class="text-white nav-link px-4">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav col-12 col-md-auto mb-md-0 mb-3 justify-content-center gap-md-0 gap-3">
+                    <li><a href="#section-home" class="text-white nav-link px-md-4">Présentation</a></li>
+                    <li><a href="#skills-section" class="text-white nav-link px-md-4">Compétences</a></li>
+                    <li><a href="#section-project" class="text-white nav-link px-md-4">Projets</a></li>
+                    <li><a href="#section-contact" class="text-white nav-link px-md-4">Contact</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-primary">CV</button>
+            <button type="button" class="btn btn-primary">
+                CV <i class="fa-solid fa-download ms-2"></i>
+            </button>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="relative min-h-screen flex items-center bg presentation">
+    <!-- HERO / PRÉSENTATION -->
+    <section class="presentation" id="section-home">
         <div class="container">
             <div class="row align-items-center g-4">
-                <!-- Présentation -->
-                <div class="col-lg-6 p-5">
+                <!-- Texte de présentation -->
+                <div class="col-lg-6 p-md-5 p-3">
                     <h1 class="display-2 text-white lh-1 mb-4">Gwladys Laisné</h1>
-                    <p class="lead text-white mb-4">Future étudiante en Bachelor Concepteur Développeur d’Applications,
+                    <p class="lead text-white mb-4">
+                        Future étudiante en Bachelor Concepteur Développeur d'Applications,
                         je recherche une alternance pour consolider mes compétences en développement web et contribuer
                         activement à des projets techniques.
-                    <div class="d-grid gap-4 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-3">Me contacter</button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-3">Mes projets</button>
+                    </p>
+                    <div class="d-grid gap-3 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                        <a href="#section-contact" class="btn btn-outline-secondary btn-lg px-4">
+                            Me contacter
+                        </a>
+                        <a href="#section-project" class="btn btn-outline-secondary btn-lg px-4">
+                            Mes projets
+                        </a>
                     </div>
                 </div>
 
                 <!-- Terminal -->
-                <div class="col-lg-6 p-5">
+                <div class="col-lg-6 p-md-5 p-3">
                     <div class="terminal-container">
                         <div class="top-side">
                             <div class="red-circle"></div>
@@ -66,8 +80,8 @@
                             <div class="green-line line-2">✓ Obtenir mon Titre Professionnel "Développeur Web & Web
                                 Mobile"...</div>
                             <div class="green-line line-3">✓ Intégrer la formation Concepteur développeur
-                                d'Application..</div>
-                            <div class="green-line line-4"> --> Trouver une alternance.</div>
+                                d'Application...</div>
+                            <div class="green-line line-4">✓ Trouver une alternance.</div>
                             <div class="line"><span class="dollar">$</span>npm run dev</div>
                         </div>
                     </div>
@@ -76,13 +90,14 @@
         </div>
     </section>
 
-    <!-- COMPETENCES -->
-
-    <section class="skills-section">
+    <!-- COMPÉTENCES -->
+    <section class="skills-section" id="skills-section">
         <div class="container container-skills">
 
             <div class="skills-header mb-5">
-                <h2 class="display-4 fw-light text-white mb-3">Compétences <span class="animate-fusee">
+                <h2 class="display-4 fw-light text-white mb-3">
+                    Compétences
+                    <span class="animate-fusee">
                         <picture class="emoji-gif">
                             <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.webp"
                                 type="image/webp" />
@@ -90,12 +105,13 @@
                         </picture>
                     </span>
                 </h2>
-                <p class="lead text-white-50">Technologies et outils que j'utilise au quotidien</p>
+                <p class="lead text-white">Technologies et outils que j'utilise au quotidien</p>
             </div>
 
-            <!-- sous-sections -->
+
             <div class="row g-4">
 
+                <!-- Front -->
                 <div class="col-lg-6">
                     <div class="skill-category">
                         <h3 class="skill-category-title">Front</h3>
@@ -110,6 +126,7 @@
                     </div>
                 </div>
 
+                <!-- Back -->
                 <div class="col-lg-6">
                     <div class="skill-category">
                         <h3 class="skill-category-title">Back</h3>
@@ -129,7 +146,7 @@
                     <div class="skill-category">
                         <h3 class="skill-category-title">Conception</h3>
                         <div class="skills-tags">
-                            <span class="skill-tag">Chier des charges</span>
+                            <span class="skill-tag">Cahier des charges</span>
                             <span class="skill-tag">Diagrammes</span>
                             <span class="skill-tag">Figma</span>
                             <span class="skill-tag">Responsive Design</span>
@@ -157,11 +174,11 @@
         </div>
     </section>
 
-
     <!-- PROJETS -->
-    <section class="section-project">
-        <div class="container px-4 py-5" id="featured-3">
-            <h2 class="display-4 fw-light text-white mb-3">Mes projets
+    <section class="section-project" id="section-project">
+        <div class="container px-md-4 px-3 py-5">
+            <h2 class="display-4 fw-light text-white mb-5">
+                Mes projets
                 <span>
                     <picture class="emoji-gif">
                         <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.webp"
@@ -172,83 +189,90 @@
                 </span>
             </h2>
 
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="row g-4 py-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
 
-                <!-- Projet 1 -->
-                <div class="feature col">
-                    <div class="feature-icon d-inline-flex align-items-center justify-content-center mb-3">
-                        <img class="img-project img-thumbnail" src="/assets/img/logoEcoride.png" alt="Logo Ecoride">
+                <!-- Projet 1 : Ecoride -->
+                <div class="col">
+                    <div class="feature">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center mb-3">
+                            <img class="img-project img-thumbnail" src="/assets/img/logoEcoride.webp"
+                                alt="Logo Ecoride">
+                        </div>
+                        <h3 class="fs-2 text-white">Ecoride</h3>
+                        <p class="text-white">
+                            EcoRide est une plateforme de covoiturage écoresponsable que j'ai développée de A à Z.
+                            De la gestion des utilisateurs à la mise en place de fonctionnalités dynamiques, ce projet
+                            m'a permis d'explorer des problématiques concrètes de développement.
+                        </p>
+                        <a href="#" class="icon-link">
+                            Voir le détail <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
                     </div>
-                    <h3 class="fs-2 text-white">Ecoride</h3>
-                    <p class="text-white">EcoRide est une plateforme de covoiturage écoresponsable que j’ai développée
-                        de A à Z.
-                        De la gestion des utilisateurs à la mise en place de fonctionnalités dynamiques, ce projet m’a
-                        permis d’explorer des problématiques concrètes de développement. </p> <a href="#"
-                        class="icon-link">
-                        Voir le détail</a>
                 </div>
 
-                <!-- Projet 2 -->
-                <div class="feature col">
-                    <div class="feature-icon d-inline-flex align-items-center justify-content-center mb-3">
-                        <img class="img-project img-thumbnail" src="/assets/img/logoGameez.jpg" alt="Logo Gameez">
+                <!-- Projet 2 : Gameez -->
+                <div class="col">
+                    <div class="feature">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center mb-3">
+                            <img class="img-project img-thumbnail" src="/assets/img/logoGameez.webp" alt="Logo Gameez">
+                        </div>
+                        <h3 class="fs-2 text-white">Gameez</h3>
+                        <p class="text-white">
+                            Gameez est une plateforme de jeux de société que j'ai développée en
+                            construisant moi-même toute la base de données.
+                            Entre recherche, wishlist et système d'avis, ce projet m'a permis de gérer des
+                            fonctionnalités
+                            complètes côté front et back.
+                        </p>
+                        <a href="#" class="icon-link">
+                            Voir le détail <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
                     </div>
-                    <h3 class="fs-2 text-white">Gameez</h3>
-                    <p class="text-white">Gameez est une plateforme de jeux de société que j’ai développée en
-                        construisant moi-même toute la base de données. <br>
-                        Entre recherche, wishlist et système d’avis, ce projet m’a permis de gérer des fonctionnalités
-                        complètes côté front et back. </p> <a href="#" class="icon-link">
-                        Voir le détail
-                    </a>
                 </div>
 
-                <!-- Projet 3 -->
-                <div class="feature col">
-                    <div class="feature-icon d-inline-flex align-items-center justify-content-center mb-3">
-                        <img class="img-project img-thumbnail" src="/assets/img/logoQuiz.webp" alt="Logo Ludi'Quiz">
+                <!-- Projet 3 : Ludi'Quiz -->
+                <div class="col">
+                    <div class="feature">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center mb-3">
+                            <img class="img-project img-thumbnail" src="/assets/img/logoQuiz.webp" alt="Logo Ludi'Quiz">
+                        </div>
+                        <h3 class="fs-2 text-white">Ludi'Quiz</h3>
+                        <p class="text-white">
+                            Ludi'Quiz est une plateforme de quiz interactif sur 6 thèmes, comprenant 10
+                            questions aléatoires, un timer dynamique et un score calculé automatiquement. Toutes les
+                            données
+                            ont été intégrées manuellement, mettant en avant ma maîtrise de JavaScript.
+                        </p>
+                        <a href="#" class="icon-link">
+                            Voir le détail <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
                     </div>
-                    <h3 class="fs-2 text-white">Ludi'Quiz</h3>
-                    <p class="text-white">Ludi'Quiz est une plateforme de quiz interactif sur 6 thèmes, comprenant 10
-                        questions aléatoires, un timer dynamique et un score calculé automatiquement. Toutes les données
-                        ont été intégrées manuellement, mettant en avant ma maîtrise de JavaScript, de la logique
-                        applicative et de l’expérience utilisateur. </p> <a href="#" class="icon-link">
-                        Voir le détail
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-
     <!-- CONTACT -->
-    <section class="section-contact">
+    <section class="section-contact" id="section-contact">
         <div class="container">
             <div class="mb-5 pb-5">
                 <h2 class="display-4 text-white mb-3">Me Contacter</h2>
-                <p class="lead text-white">Actuellement à la recherche d'une alternance en tant que Concepteur
+                <p class="lead">
+                    Actuellement à la recherche d'une alternance en tant que Concepteur
                     Développeur d'Application pour la rentrée de septembre 2026, je suis disponible par email, LinkedIn
                     ou via le formulaire ci-dessous pour échanger avec vous sur mes projets ou opportunités
-                    professionnelles. <br>
-
-                    <br>Pour les étudiant·e·s ou développeurs souhaitant discuter, poser des questions ou échanger
-                    autour du
-                    code et de mes projets, vous pouvez également me joindre sur Discord
+                    professionnelles.
                 </p>
             </div>
 
-
-            <div class="row align-items-center g-5">
+            <div class="row align-items-start g-5">
+                <!-- Cartes de contact -->
                 <div class="col-lg-6">
                     <!-- Email -->
-                    <div class="card bg border-primary border-opacity-25 mb-4">
+                    <div class="card bg-transparent border mb-4">
                         <div class="card-body text-center">
                             <div class="mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="text-primary">
-                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
-                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                                </svg>
+                                <i class="fa-solid fa-envelope text-secondary"></i>
                             </div>
                             <h5 class="card-title text-white">Email</h5>
                             <a href="mailto:gwladyslaisne@outlook.fr" class="text-decoration-none">
@@ -258,21 +282,13 @@
                     </div>
 
                     <!-- LinkedIn -->
-                    <div class="card bg border-primary border-opacity-25 mb-4">
+                    <div class="card bg-transparent border mb-4">
                         <div class="card-body text-center">
                             <div class="mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="text-primary">
-                                    <path
-                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                    </path>
-                                    <rect width="4" height="12" x="2" y="9"></rect>
-                                    <circle cx="4" cy="4" r="2"></circle>
-                                </svg>
+                                <i class="fa-brands fa-linkedin text-secondary"></i>
                             </div>
                             <h5 class="card-title text-white">LinkedIn</h5>
-                            <a href="https://www.linkedin.com/in/edouard-breheret-2839743a3" target="_blank"
+                            <a href="https://www.linkedin.com/in/gwladys-laisn%C3%A9/" target="_blank"
                                 rel="noopener noreferrer" class="text-decoration-none">
                                 Visiter mon profil
                             </a>
@@ -280,20 +296,13 @@
                     </div>
 
                     <!-- GitHub -->
-                    <div class="card bg border-primary border-opacity-25 mb-4">
+                    <div class="card bg-transparent border mb-4">
                         <div class="card-body text-center">
                             <div class="mb-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="text-primary">
-                                    <path
-                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
-                                    </path>
-                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
-                                </svg>
+                                <i class="fa-brands fa-github text-secondary"></i>
                             </div>
                             <h5 class="card-title text-white">GitHub</h5>
-                            <a href="https://github.com/edouardbhrt" target="_blank" rel="noopener noreferrer"
+                            <a href="https://github.com/Gwladyslsn" target="_blank" rel="noopener noreferrer"
                                 class="text-decoration-none">
                                 Voir mes projets
                             </a>
@@ -303,78 +312,68 @@
 
                 </div>
 
-                <!-- Formulaire -->
+                <!-- Formulaire de contact -->
                 <div class="col-lg-6">
-                    <div class="card bg border-primary border-opacity-25">
-                        <div class="card-body">
-                            <h5 class="card-title text-white mb-4">Envoyer un message</h5>
-                            <form class="space-y-4">
+                    <div class="card bg-transparent border">
+                        <div class="card-body p-4">
+                            <h5 class="card-title text-white text-center mb-4">Envoyer un message</h5>
+                            <form id="contactForm">
                                 <div class="mb-3">
                                     <label for="lastname" class="form-label text-white">Nom</label>
-                                    <input type="text" class="form-control bg-white border-secondary text-white"
-                                        id="lastname" placeholder="Votre nom">
+                                    <input type="text" class="form-control" id="lastname" placeholder="Votre nom"
+                                        required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="name" class="form-label text-white">Prénom</label>
-                                    <input type="text" class="form-control bg-white border-secondary text-white"
-                                        id="name" placeholder="Votre prénom">
+                                    <label for="firstname" class="form-label text-white">Prénom</label>
+                                    <input type="text" class="form-control" id="firstname" placeholder="Votre prénom"
+                                        required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label text-white">Email</label>
-                                    <input type="email" class="form-control bg-white border-secondary text-white"
-                                        id="email" placeholder="votre@email.com">
+                                    <input type="email" class="form-control" id="email" placeholder="votre@email.com"
+                                        required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="message" class="form-label text-white">Message</label>
-                                    <textarea class="form-control bg-white border-secondary text-white" id="message"
-                                        rows="5" placeholder="Bonjour, je vous contacte concernant..."></textarea>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Bonjour, je vous contacte concernant..." required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100">
                                     Envoyer
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" style="width: 16px; height: 16px; margin-left: 8px;">
-                                        <path
-                                            d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
-                                        </path>
-                                        <path d="m21.854 2.147-10.94 10.939"></path>
-                                    </svg>
+                                    <i class="fa-solid fa-paper-plane ms-2"></i>
                                 </button>
                             </form>
                         </div>
                     </div>
                 </div>
 
+
                 <!-- Discord-->
-                <div class="row g-4 align-items-center justify-content-center mt-5 pt-5">
+                <div class="row g-4 align-items-center justify-content-center mx-auto">
                     <div class="col-lg-6">
                         <p class="text-white">Pour les étudiant·e·s ou développeurs souhaitant discuter, poser des
-                            questions ou échanger autour du code et de mes projets, vous pouvez également me rejoindre
-                            sur Discord</p>
+                            questions ou échanger autour du code et de mes projets, vous pouvez également me joindre
+                            sur Discord
+                        </p>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card bg border-primary border-opacity-25">
+                    <div class="col-lg-4 ">
+                        <div class="card bg-transparent border mb-4">
                             <div class="card-body text-center">
                                 <div class="mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path
-                                            d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
-                                    </svg>
+                                    <i class="fa-brands fa-discord text-secondary"></i>
                                 </div>
                                 <h5 class="card-title text-white">Discord</h5>
-                                <p class="text-white-50 small">GwladysL#0000</p>
+                                <p class="text-white-50 small">Gwladys#8431</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-</body>
+    <script src="/assets/js/animations.js"></script>
 
+</body>
 
 </html>

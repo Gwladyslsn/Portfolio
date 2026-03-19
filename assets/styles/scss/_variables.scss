@@ -1,0 +1,111 @@
+
+// PALETTE DE COULEURS
+
+
+// Couleurs primaires
+$primary: #55198b;
+$secondary: #aaa5ff;
+$accent: #fec131;
+
+// Couleurs neutres
+$dark: #171c28;
+$gray: #868e96;
+$lightgray: #f3efef;
+$white: #ffffff;
+
+// Couleurs secondaires (pour les sections)
+$bg-primary: #050815;    // Fond très sombre (hero, projets)
+$bg-secondary: #101729;  // Fond sombre (compétences, contact)
+$bg-tertiary: #141922;   // Fond gris foncé
+
+// Couleurs de bordures et accents
+$border-light: #1a222f;
+$border-accent: #2a3a4f;
+
+// Map de couleurs pour Bootstrap
+$colors: (
+    'primary': $primary,
+    'secondary': $secondary,
+    'accent': $accent,
+    'dark': $dark,
+    'gray': $gray,
+    'lightgray': $lightgray,
+    'white': $white
+);
+
+
+// ACCESSIBILITÉ - CONTRASTES
+
+
+// Texte sur fond sombre (WCAG AA: 4.5:1 minimum)
+$text-light: $white;           // Contraste optimal
+$text-muted: #b8b8c8;          // Contraste bon (~6:1)
+$text-secondary: #868e96;      // Contraste acceptable (~4.5:1)
+
+
+// ESPACEMENTS
+
+
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+$spacing-3xl: 4rem;
+$spacing-4xl: 5rem;
+
+
+// BREAKPOINTS RESPONSIFS
+
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+// Mixins pour media queries
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'sm' {
+        @media (max-width: 576px) {
+            @content;
+        }
+    } @else if $breakpoint == 'md' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $breakpoint == 'lg' {
+        @media (max-width: 992px) {
+            @content;
+        }
+    } @else if $breakpoint == 'xl' {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    } @else if $breakpoint == 'up-lg' {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+}
+
+
+// TYPOGRAPHIE
+
+$font-family-base: system-ui, -apple-system, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+
+
+// TRANSITIONS & ANIMATIONS
+
+$transition-fast: 0.15s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// BORDER RADIUS
+
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;

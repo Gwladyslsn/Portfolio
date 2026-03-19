@@ -1,3 +1,296 @@
+@use '_variables.scss' as *;
+
+// ========================================
+// ANIMATIONS GLOBALES
+// ========================================
+
+// Fade in vers le haut
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Fade in vers la droite
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Fade in vers la gauche
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Pulse simple
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+// ========================================
+// CLASSES D'ANIMATION
+// ========================================
+
+// Classe pour les éléments qui doivent apparaître
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity $transition-base, transform $transition-base;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Variante avec délai en cascade
+.fade-in-stagger {
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+            animation-delay: ($i - 1) * 0.1s;
+        }
+    }
+}
+
+// Animation au scroll - pour les sections
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+
+    &.in-view {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+}
+
+// Animation au scroll - pour les cartes (projets, compétences)
+.card-animate {
+    opacity: 0;
+    transform: translateY(20px);
+
+    &.in-view {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    // Délai en cascade pour les cartes en grille
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}).in-view {
+            animation-delay: min($i * 0.1s, 0.6s);
+        }
+    }
+}
+
+// Animation des skill tags
+.skill-tag-animate {
+    opacity: 0;
+    transform: translateY(10px);
+
+    &.in-view {
+        animation: fadeInUp 0.4s ease-out forwards;
+    }
+
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}).in-view {
+            animation-delay: min($i * 0.05s, 0.5s);
+        }
+    }
+}
+
+// ========================================
+// HOVER EFFECTS
+// ========================================
+
+// Hover sur les cartes projets
+.feature {
+    transition: transform $transition-base, box-shadow $transition-base;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba($primary, 0.15);
+    }
+}
+
+// Hover sur les skill categories
+.skill-category {
+    transition: all $transition-base;
+
+    &:hover {
+        transform: translateY(-3px);
+        border-color: $primary;
+        box-shadow: 0 8px 20px rgba($primary, 0.12);
+    }
+}
+
+// Hover sur les skill tags
+.skill-tag {
+    transition: all $transition-base;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($primary, 0.2);
+    }
+}
+
+// Hover sur les cartes de contact
+.card {
+    transition: all $transition-base;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba($primary, 0.15);
+    }
+}
+
+// ========================================
+// EMOJI ANIMATION
+// ========================================
+
+.animate-fusee {
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+// ========================================
+// LINK UNDERLINE ANIMATION
+// ========================================
+
+.icon-link {
+    position: relative;
+    transition: color $transition-base;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $accent;
+        transition: width $transition-base;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+// ========================================
+// BUTTON ANIMATION
+// ========================================
+
+.btn {
+    transition: all $transition-base;
+    position: relative;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// ========================================
+// FORM INPUT FOCUS
+// ========================================
+
+.form-control {
+    transition: border-color $transition-base, box-shadow $transition-base;
+
+    &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+    }
+}
+
+// ========================================
+// TERMINAL ANIMATION
+// ========================================
+
+.terminal-container {
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Ligne du terminal qui s'écrit
+.line {
+    animation: typewriter 0.3s steps(50, end);
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+// ========================================
+// RESPONSIF ANIMATIONS
+// ========================================
+
+@include respond-to('sm') {
+    // Réduire les animations sur mobile pour la perf
+    .fade-in,
+    .scroll-animate,
+    .card-animate {
+        animation-duration: 0.4s;
+    }
+
+    .feature,
+    .skill-category {
+        &:hover {
+            transform: none; // Pas de transform sur mobile
+        }
+    }
+}
+
+
+
+
 /* FUSEE */
 
 .animate-fusee {
@@ -43,6 +336,8 @@ picture.emoji-gif {
 }
 
 /* TERMINAL*/
+
+
 @keyframes green-color {
     0% {
         color: #2a7151;

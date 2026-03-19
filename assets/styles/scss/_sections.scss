@@ -1,101 +1,283 @@
-/* SECTION PRESENTATION */
+@use '_variables.scss' as *;
 
-.presentation{
-    padding-top:10rem;
-    padding-bottom: 10rem;
+
+/* SECTION PRÉSENTATION */
+
+
+.presentation {
+    h1 {
+        color: $text-light;
+        font-weight: 600;
+    }
+
+    p.lead {
+        color: $text-muted;
+        line-height: $line-height-base;
+    }
+
+    .btn-outline-secondary {
+        color: $secondary;
+        border-color: $secondary;
+        transition: all $transition-base;
+
+        &:hover {
+            background-color: $secondary;
+            border-color: $secondary;
+            color: $dark;
+        }
+
+        a {
+            color: inherit;
+        }
+    }
 }
 
 
 
-/* SECTION COMPÉTENCES */
+
+/* COMPÉTENCES */
+
 
 .skills-section {
-    background-color: #101729;
-    border-top: 1px solid #1a222f;
-    border-bottom: 1px solid #1a222f;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
+    background-color: $bg-secondary;
+    border-top: 1px solid $border-light;
+    border-bottom: 1px solid $border-light;
+    padding-top: $spacing-4xl;
+    padding-bottom: $spacing-4xl;
 }
 
-.container-skills{
-    background-color: #101729 ;
+.container-skills {
+    background-color: transparent;
 }
 
 .skills-header {
-    background-color: #101729;
     text-align: left;
-    margin-bottom: 3rem;
+    margin-bottom: $spacing-3xl;
 
     h2 {
+        color: $text-light;
         letter-spacing: -0.5px;
+        font-weight: 300;
     }
 
     p {
-        opacity: 0.8;
+        color: $text-secondary;
+        opacity: 0.85;
     }
 }
 
-/* Sous-section de compétences */
+// Catégories compétences
 .skill-category {
-    padding: 2rem;
-    border: 1px solid #1a222f;
-    border-radius: 8px;
+    padding: $spacing-2xl;
+    border: 1px solid $border-light;
+    border-radius: $border-radius-md;
+    background-color: rgba($primary, 0.05);
+    transition: all $transition-base;
 
+    &:hover {
+        border-color: $primary;
+        box-shadow: 0 4px 12px rgba($primary, 0.1);
+    }
 }
 
 .skill-category-title {
     font-size: 1.4rem;
     font-weight: 400;
-    color: #fff;
-    margin-bottom: 1.5rem;
+    color: $text-light;
+    margin-bottom: $spacing-xl;
     letter-spacing: -0.3px;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid #2a3a4f;
+    padding-bottom: $spacing-md;
+    border-bottom: 1px solid $border-accent;
 }
 
-/* Tags de compétences */
+// Tags compétences
 .skills-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: $spacing-md;
 }
 
 .skill-tag {
     display: inline-flex;
     align-items: center;
-    padding: 0.6rem 1.2rem;
+    padding: $spacing-md $spacing-lg;
     background-color: transparent;
-    border: 1px solid #2282f4;
-    color: #2282f4;
+    border: 1px solid $primary;
+    color: $secondary;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 400;
-    transition: all 0.2s ease;
+    transition: all $transition-base;
     cursor: default;
 
     &:hover {
-        background-color: rgba(34, 130, 244, 0.1);
-        box-shadow: 0 4px 12px rgba(34, 130, 244, 0.15);
+        background-color: rgba($primary, 0.15);
+        border-color: $secondary;
+        box-shadow: 0 4px 12px rgba($primary, 0.2);
     }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .skill-category {
-        padding: 1.5rem;
+
+/* SECTION PROJETS */
+
+.section-project {
+    background-color: $bg-primary;
+    padding-top: $spacing-4xl;
+    padding-bottom: $spacing-4xl;
+
+    h2 {
+        color: $text-light;
+        font-weight: 300;
+        letter-spacing: -0.5px;
     }
 
-    .skill-category-title {
-        font-size: 1.2rem;
+    .img-project {
+        width: 35%;
+        border-radius: $border-radius-md;
     }
 
-    .skill-tag {
-        font-size: 0.85rem;
-        padding: 0.5rem 1rem;
+    // Cartes de projets
+    .feature {
+        .feature-icon {
+            margin-bottom: $spacing-xl;
+        }
+
+        h3 {
+            color: $text-light;
+            margin-bottom: $spacing-md;
+            font-weight: 500;
+        }
+
+        p {
+            color: $text-muted;
+            line-height: $line-height-base;
+            margin-bottom: $spacing-md;
+        }
+
+        .icon-link {
+            color: $secondary;
+            text-decoration: none;
+            transition: color $transition-base;
+            font-weight: 500;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+}
+
+
+/* SECTION CONTACT */
+
+
+.section-contact {
+    background-color: $bg-secondary;
+    border-top: 1px solid $border-light;
+    border-bottom: 1px solid $border-light;
+    padding-top: $spacing-4xl;
+    padding-bottom: $spacing-4xl;
+
+    h2 {
+        color: $text-light;
+        font-weight: 300;
+        letter-spacing: -0.5px;
+        margin-bottom: $spacing-xl;
     }
 
+    .lead {
+        color: $text-muted;
+    }
+
+    // Cartes de contact
+    .card {
+        background-color: rgba($primary, 0.08);
+        border: 1px solid rgba($primary, 0.3);
+        border-radius: $border-radius-md;
+        transition: all $transition-base;
+
+        &:hover {
+            border-color: $primary;
+            box-shadow: 0 4px 12px rgba($primary, 0.15);
+        }
+
+                    .fa-brands{
+            font-size: 24px;
+        }
+
+        .card-body {
+            padding: $spacing-2xl;
+
+            svg {
+                color: $secondary;
+                width: 32px;
+                height: 32px;
+            }
+
+            .card-title {
+                color: $text-light;
+                font-weight: 500;
+                margin-bottom: $spacing-md;
+            }
+
+            a {
+                color: $secondary;
+                text-decoration: none;
+                transition: color $transition-base;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
+
+    // Formulaire
+    .form-label {
+        color: $text-light;
+        margin-bottom: $spacing-md;
+        font-weight: 500;
+    }
+
+    .form-control {
+        background-color: $white;
+        border: 1px solid $border-light;
+        color: $dark;
+        transition: border-color $transition-base;
+
+        &::placeholder {
+            color: $gray;
+        }
+
+        &:focus {
+            background-color: $white;
+            border-color: $primary;
+            color: $dark;
+            box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+        }
+    }
+
+    .btn-primary {
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+        font-weight: 500;
+        transition: all $transition-base;
+
+        &:hover {
+            background-color: lighten($primary, 8%);
+            border-color: lighten($primary, 8%);
+        }
+    }
+}
+
+
+/* RESPONSIVE */
+
+
+@include respond-to('md') {
     .skills-header {
-        margin-bottom: 2rem;
+        margin-bottom: $spacing-2xl;
 
         h2 {
             font-size: 2rem;
@@ -105,55 +287,78 @@
             font-size: 1rem;
         }
     }
+
+    .skill-category {
+        padding: $spacing-xl;
+    }
+
+    .skill-category-title {
+        font-size: 1.2rem;
+    }
+
+    .skill-tag {
+        font-size: 0.85rem;
+        padding: $spacing-md 1rem;
+    }
+
+    .section-contact {
+        .row {
+            flex-direction: column;
+        }
+    }
 }
 
-@media (max-width: 480px) {
+@include respond-to('sm') {
     .skills-section {
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
+        padding-top: $spacing-2xl !important;
+        padding-bottom: $spacing-2xl !important;
     }
 
     .skill-category {
-        padding: 1rem;
+        padding: $spacing-md;
     }
 
     .skill-category-title {
         font-size: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: $spacing-md;
     }
 
     .skills-tags {
-        gap: 0.6rem;
+        gap: $spacing-sm;
     }
 
     .skill-tag {
         font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        padding: $spacing-sm 0.8rem;
     }
 
     .skills-header h2 {
         font-size: 1.75rem;
     }
-}
 
-/* PROJECTS */
+    .section-project {
+        .img-project {
+            width: 50%;
+        }
 
-.section-project{
-    background-color: #050815;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
-
-    .img-project{
-        width:35%;
+        .feature {
+            p {
+                font-size: 0.95rem;
+            }
+        }
     }
-}
 
-/* Contact */
+    .section-contact {
+        .card {
+            margin-bottom: $spacing-xl;
 
-.section-contact{
-    background-color: #101729;
-    border-top: 1px solid #1a222f;
-    border-bottom: 1px solid #1a222f;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
+
+        }
+
+        .form-control {
+            font-size: 1rem;
+        }
+
+        
+    }
 }
