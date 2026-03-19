@@ -34,12 +34,13 @@ header {
 
 
 nav {
+    
     a {
         color: $text-light;
         transition: color $transition-base;
 
         &:hover {
-            color: $secondary;
+            color: $secondary !important;
         }
     }
 }

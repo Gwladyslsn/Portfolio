@@ -33,7 +33,7 @@ nav a {
   transition: color 0.3s ease;
 }
 nav a:hover {
-  color: #aaa5ff;
+  color: #aaa5ff !important;
 }
 
 header .btn-primary {
@@ -198,6 +198,154 @@ section.section-contact {
 }
 .presentation .btn-outline-secondary a {
   color: inherit;
+}
+.presentation {
+  /* Accordion */
+}
+.presentation .presentation-accordion {
+  background: #050815;
+}
+.presentation .presentation-accordion .accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.presentation .presentation-accordion .accordion-item {
+  border: 1px solid #1a222f;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.presentation .presentation-accordion .accordion-item:hover {
+  border-color: #aaa5ff;
+  box-shadow: 0 0 0 2px rgba(170, 165, 255, 0.1);
+}
+.presentation .presentation-accordion .accordion-item.active .accordion-header {
+  background: linear-gradient(135deg, rgba(85, 25, 139, 0.15) 0%, rgba(170, 165, 255, 0.08) 100%);
+  border-bottom-color: #aaa5ff;
+}
+.presentation .presentation-accordion .accordion-item.active .accordion-header .accordion-icon {
+  color: #aaa5ff;
+  transform: rotate(180deg);
+}
+.presentation .presentation-accordion .accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  background: #101729;
+  border: none;
+  border-bottom: 1px solid #1a222f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-family: inherit;
+}
+.presentation .presentation-accordion .accordion-header:hover {
+  background: rgba(170, 165, 255, 0.05);
+}
+.presentation .presentation-accordion .accordion-header:hover .accordion-title {
+  color: #aaa5ff;
+}
+.presentation .presentation-accordion .accordion-header:focus-visible {
+  outline: 2px solid #aaa5ff;
+  outline-offset: -2px;
+}
+.presentation .presentation-accordion .accordion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: #868e96;
+  transition: all 0.3s ease;
+}
+.presentation .presentation-accordion .accordion-icon svg {
+  width: 100%;
+  height: 100%;
+}
+.presentation .presentation-accordion .accordion-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+.presentation .presentation-accordion .accordion-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+.presentation .presentation-accordion .accordion-subtitle {
+  font-size: 0.875rem;
+  color: #868e96;
+  line-height: 1.4;
+}
+.presentation .presentation-accordion .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease ease;
+  border-bottom: 1px solid #1a222f;
+}
+.presentation .presentation-accordion .accordion-content.active {
+  max-height: 500px;
+}
+.presentation .presentation-accordion .accordion-body {
+  padding: 1.5rem;
+  color: #b8b8c8;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.presentation .presentation-accordion .accordion-body p {
+  margin: 0 0 1rem 0;
+}
+.presentation .presentation-accordion .accordion-body p:last-child {
+  margin-bottom: 0;
+}
+.presentation .presentation-accordion .accordion-body p strong {
+  color: #aaa5ff;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .presentation .presentation-accordion .accordion-header {
+    padding: 1rem;
+  }
+  .presentation .presentation-accordion .accordion-title {
+    font-size: 0.95rem;
+  }
+  .presentation .presentation-accordion .accordion-subtitle {
+    font-size: 0.8rem;
+  }
+  .presentation .presentation-accordion .accordion-body {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 576px) {
+  .presentation .presentation-accordion .accordion-wrapper {
+    gap: 0.5rem;
+  }
+  .presentation .presentation-accordion .accordion-header {
+    padding: 1rem 0.5rem;
+    gap: 0.5rem;
+  }
+  .presentation .presentation-accordion .accordion-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .presentation .presentation-accordion .accordion-title {
+    font-size: 0.9rem;
+  }
+  .presentation .presentation-accordion .accordion-subtitle {
+    font-size: 0.75rem;
+  }
+  .presentation .presentation-accordion .accordion-body {
+    padding: 1rem 0.5rem;
+    font-size: 0.85rem;
+  }
 }
 
 /* COMPÉTENCES */
