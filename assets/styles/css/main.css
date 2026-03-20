@@ -546,6 +546,12 @@ section.section-contact {
   border-color: rgb(106.1463414634, 31.2195121951, 173.5804878049);
 }
 
+.section-footer {
+  background-color: #050815;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .skills-header {

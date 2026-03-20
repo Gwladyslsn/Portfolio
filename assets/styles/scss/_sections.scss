@@ -366,6 +366,7 @@
     border-bottom: 1px solid $border-light;
     padding-top: $spacing-4xl;
     padding-bottom: $spacing-4xl;
+    
 
     h2 {
         color: $text-light;
@@ -458,6 +459,12 @@
             border-color: lighten($primary, 8%);
         }
     }
+}
+
+.section-footer{
+    background-color: $bg-primary;
+    padding-top: $spacing-xs;
+    padding-bottom: $spacing-xs;
 }
 
 
