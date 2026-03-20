@@ -1,0 +1,71 @@
+@use '_variables.scss' as *;
+
+.project-page {
+    background-color: $bg-primary;
+    color: $text-light;
+
+    .project-title {
+        color: $primary;
+        font-weight: bold;
+    }
+
+    .text-secondary {
+        color: $text-muted;
+    }
+
+    .project-section {
+        border-bottom: 1px solid $border-accent;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+        background-color: $primary;
+        border-color: $primary;
+
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+
+    .btn-outline-secondary {
+        border-color: $accent;
+        color: $accent;
+
+        &:hover {
+            background-color: $accent;
+            color: $dark;
+        }
+    }
+
+    .tech-tags {
+        display: flex;
+        gap: 0.5rem;
+
+        span {
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+        }
+
+        .tech-html {
+            background-color: #e34c26;
+            color: $white;
+        }
+
+        .tech-css {
+            background-color: #264de4;
+            color: $white;
+        }
+
+        .tech-js {
+            background-color: #f0db4f;
+            color: $dark;
+        }
+
+        .tech-mongo {
+            background-color: #4db33d;
+            color: $white;
+        }
+    }
+}

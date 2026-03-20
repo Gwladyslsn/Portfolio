@@ -1,0 +1,56 @@
+.project-page {
+  background-color: #050815;
+  color: #ffffff;
+}
+.project-page .project-title {
+  color: #55198b;
+  font-weight: bold;
+}
+.project-page .text-secondary {
+  color: #b8b8c8;
+}
+.project-page .project-section {
+  border-bottom: 1px solid #2a3a4f;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.project-page .btn-primary {
+  background-color: #55198b;
+  border-color: #55198b;
+}
+.project-page .btn-primary:hover {
+  background-color: #aaa5ff;
+}
+.project-page .btn-outline-secondary {
+  border-color: #fec131;
+  color: #fec131;
+}
+.project-page .btn-outline-secondary:hover {
+  background-color: #fec131;
+  color: #171c28;
+}
+.project-page .tech-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+.project-page .tech-tags span {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+.project-page .tech-tags .tech-html {
+  background-color: #e34c26;
+  color: #ffffff;
+}
+.project-page .tech-tags .tech-css {
+  background-color: #264de4;
+  color: #ffffff;
+}
+.project-page .tech-tags .tech-js {
+  background-color: #f0db4f;
+  color: #171c28;
+}
+.project-page .tech-tags .tech-mongo {
+  background-color: #4db33d;
+  color: #ffffff;
+}/*# sourceMappingURL=projects.css.map */
