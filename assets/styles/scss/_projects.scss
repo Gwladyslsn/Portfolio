@@ -45,27 +45,20 @@
         span {
             padding: 0.4rem 0.8rem;
             border-radius: 0.5rem;
-            font-weight: bold;
+            font-size: 0.9rem;
+            font-weight: 400;
+            border: 1px solid $primary;
+            color: $secondary;
+            border-radius: 20px;
+            background-color: transparent;
+            transition: all $transition-base;
+
+            &:hover {
+                background-color: rgba($primary, 0.15);
+                border-color: $secondary;
+                box-shadow: 0 4px 12px rgba($primary, 0.2);
+            }
         }
 
-        .tech-html {
-            background-color: #e34c26;
-            color: $white;
-        }
-
-        .tech-css {
-            background-color: #264de4;
-            color: $white;
-        }
-
-        .tech-js {
-            background-color: #f0db4f;
-            color: $dark;
-        }
-
-        .tech-mongo {
-            background-color: #4db33d;
-            color: $white;
-        }
     }
 }

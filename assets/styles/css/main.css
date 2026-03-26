@@ -1014,21 +1014,16 @@ picture.emoji-gif img {
 .project-page .tech-tags span {
   padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #55198b;
+  color: #aaa5ff;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
-.project-page .tech-tags .tech-html {
-  background-color: #e34c26;
-  color: #ffffff;
-}
-.project-page .tech-tags .tech-css {
-  background-color: #264de4;
-  color: #ffffff;
-}
-.project-page .tech-tags .tech-js {
-  background-color: #f0db4f;
-  color: #171c28;
-}
-.project-page .tech-tags .tech-mongo {
-  background-color: #4db33d;
-  color: #ffffff;
+.project-page .tech-tags span:hover {
+  background-color: rgba(85, 25, 139, 0.15);
+  border-color: #aaa5ff;
+  box-shadow: 0 4px 12px rgba(85, 25, 139, 0.2);
 }/*# sourceMappingURL=main.css.map */
