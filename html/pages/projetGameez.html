@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <meta name="Description" content="Consulter le projet Gameez de Gwladys" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/styles/css/main.css">
+    <title>Projet Gameez</title>
+</head>
+
+
+<div id="header"></div>
+
+<main>
+    <!-- Page Projet -->
+    <section class="project-page py-5">
+        <div class="container">
+            <!-- Titre -->
+            <div class="text-center mb-4">
+                <h1 class="project-title">Gameez</h1>
+                <p class="text-secondary">Plateforme dédiée à la recherche et notation de jeux de société.</p>
+                <div class="project-meta mt-2">
+                    <span>Durée: 2 mois</span>
+                </div>
+            </div>
+
+            <!-- Contexte -->
+            <div class="project-section mb-4">
+                <h2>Contexte du Projet</h2>
+                <p>Fan de jeux de société, j'ai voulu créer une plateforme qui recense un maximum de jeux pour permettre aux joueurs de découvrir, noter et d'ajouter des jeux dans leur wishlist.
+                    Ce projet a été commencé en parrallèle de ma formation DWWM et va être alimenté et améliorer prochainement. 
+                </p>
+            </div>
+
+            <!-- Fonctionnalités -->
+            <div class="project-section mb-4">
+                <h2>Fonctionnalités Principales</h2>
+                <ul>
+                    <li>Création de comptes utilisateurs</li>
+                    <li>Authentification sécurisée</li>
+                    <li>Recherche de jeux avec filtre dynamique</li>
+                    <li>Ajout de jeux dans une wishlist</li>
+                    <li>Consultation et rédaction d'avis (note et commentaire)</li>
+                    <li>Gestion des jeux par l'administrateur</li>
+                    <li>Gestion des utilisateurs par l'administrateur</li>
+                    <li>Forum de discussion entre utilisateurs</li>
+                    <li>Stockage de données de manière sécurisée</li>
+                    <li>Accessibilité grâce au responsive et à l’ergonomie.</li>
+                </ul>
+            </div>
+
+            <!-- Galerie -->
+            <div class="project-section mb-4">
+                <h2>Galerie</h2>
+                <div class="row g-3">
+                    <div class="col-md-4"><img src="/assets/img/projects/Gameez/img1.webp" class="img-fluid rounded" alt="Capture écran accueil du site Ecoride"></div>
+                    <div class="col-md-4"><img src="/assets/img/projects/Gameez/img2.webp" class="img-fluid rounded" alt="Capture écran proposition de trajet sur le site Ecoride"></div>
+                    <div class="col-md-4"><img src="/assets/img/projects/Gameez/img3.webp" class="img-fluid rounded" alt="Capture écran dashboard administrateur"></div>
+                </div>
+            </div>
+
+
+
+            <!-- Ce que j'ai appris -->
+            <div class="project-section mb-4">
+                <h2>Ce que j'ai appris</h2>
+                <ul>
+                    <li>Organisation et gestion de projet : Utilisation d'outil comme Trello ou Notion.</li>
+                    <li>Design : Maquettage, choix de la charte graphique, responsive, ergonomie.</li>
+                    <li>Gestion des utilisateurs : Création de compte, gestion sécurisé des informations personnelles, gestion des accès.</li>
+                    <li>Gestion base de données : SQL pour les jeux, NoSQL pour le forum. Manipulation de jointure pour les lien entre les jeux et leurs extensions.</li>
+                    <li>Gestion filtre dynamique : Les résultats des jeux se met à jour en temps réél.</li>
+                    <li>Clareté du code : Structure MVC pour faciliter la clareté et donc la maintenabilité du code.</li>
+                    <li>Sécurité du code : Utilisation de requêtes préparées, hash de mot de passe, token CSRF, sécurisation des input pour contrer les failles connues. Utilisation d'outils dédié à la sécurité comme SonarQube.</li>
+                    
+                </ul>
+            </div>
+
+            <!-- Technologies -->
+            <div class="project-section ">
+                <h2>Technologies utilisées</h2>
+                <div class="tech-tags mt-2 display-flex flex-wrap">
+                    <span class="tech">HTML5</span>
+                    <span class="tech">CSS3</span>
+                    <span class="tech">Tailwind</span>
+                    <span class="tech">Javascript</span>
+                    <span class="tech">PHP 8.3</span>
+                    <span class="tech">MySQL</span>
+                    <span class="tech">MongoDB</span>
+                    <span class="tech">Docker</span>
+                    <span class="tech">Heroku</span>
+                </div>
+            </div>
+
+            <!-- Liens -->
+            <div class="project-links text-center my-4">
+                <a href="https://gameez-app-565abf2c252a.herokuapp.com/" target="_blank" class="btn btn-primary me-2">Voir le site en ligne</a>
+                <a href="https://github.com/Gwladyslsn/gameez" target="_blank" class="btn btn-outline-secondary">Code sur GitHub</a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+<section id="footer" class="section-footer"></section>
+
+
+<script src="/assets/js/componentsLoad.js"></script>
+
+
+</body>
+
+</html>
