@@ -7,5 +7,5 @@ async function loadHTML(id, file) {
 
 
 
-loadHTML("header", "../html/components/header.html");
-loadHTML("footer", "../html/components/footer.html");
+loadHTML("header", "../../html/components/header.html");
+loadHTML("footer", "../../html/components/footer.html");
