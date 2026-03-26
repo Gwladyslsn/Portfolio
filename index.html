@@ -420,31 +420,43 @@
                     <div class="card bg-transparent border">
                         <div class="card-body p-4">
                             <h5 class="card-title text-white text-center mb-4">Envoyer un message</h5>
-                            <form id="contactForm">
+
+                            <form id="contactForm" action="https://formspree.io/f/xdapoqqo" method="POST">
+
                                 <div class="mb-3">
                                     <label for="lastname" class="form-label text-white">Nom</label>
-                                    <input type="text" class="form-control" id="lastname" placeholder="Votre nom"
-                                        required>
+                                    <input type="text" class="form-control" id="lastname" name="lastname"
+                                        placeholder="Votre nom" required>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="firstname" class="form-label text-white">Prénom</label>
-                                    <input type="text" class="form-control" id="firstname" placeholder="Votre prénom"
-                                        required>
+                                    <input type="text" class="form-control" id="firstname" name="firstname"
+                                        placeholder="Votre prénom" required>
+                                        <input type="text" name="_gotcha" style="display:none">
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="email" class="form-label text-white">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="votre@email.com"
-                                        required>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="votre@email.com" required>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="message" class="form-label text-white">Message</label>
-                                    <textarea class="form-control" id="message" rows="5"
+                                    <textarea class="form-control" id="message" name="message" rows="5"
                                         placeholder="Bonjour, je vous contacte concernant..." required></textarea>
                                 </div>
+
                                 <button type="submit" class="btn btn-primary w-100">
                                     Envoyer
                                     <i class="fa-solid fa-paper-plane ms-2"></i>
                                 </button>
+
+                                <div id="formSuccess" class="alert alert-success mt-3 d-none">
+                                    ✅ Merci ! Votre message a bien été envoyé.
+                                </div>
+
                             </form>
                         </div>
                     </div>
@@ -482,6 +494,7 @@
 
 <script src="/assets/js/componentsLoad.js"></script>
 <script src="/assets/js/animations.js"></script>
+<script src="/assets/js/contactForm.js"></script>
 
 </body>
 
