@@ -11,7 +11,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="/assets/styles/css/main.css">
-    <title>Projet Gameez</title>
+    <title>Projet Ludi'Quiz</title>
 </head>
 
 
@@ -23,18 +23,18 @@
         <div class="container">
             <!-- Titre -->
             <div class="text-center mb-4">
-                <h1 class="project-title">Gameez</h1>
-                <p class="text-secondary">Plateforme dédiée à la recherche et notation de jeux de société.</p>
+                <h1 class="project-title">Ludi'Quiz</h1>
+                <p class="text-secondary">Plateforme de quiz consacré à la culture générale</p>
                 <div class="project-meta mt-2">
-                    <span>Durée: 2 mois</span>
+                    <span>Durée: 1 mois</span>
                 </div>
             </div>
 
             <!-- Contexte -->
             <div class="project-section mb-4">
                 <h2>Contexte du Projet</h2>
-                <p>Fan de jeux de société, j'ai voulu créer une plateforme qui recense un maximum de jeux pour permettre aux joueurs de découvrir, noter et d'ajouter des jeux dans leur wishlist.
-                    Ce projet a été commencé en parrallèle de ma formation DWWM et va être alimenté et améliorer prochainement. 
+                <p>Grande fan de quiz en tout genre, j'ai voulu créer une plateforme dédié au quiz sur la culture générale. La plateforme propose à ce jour 6 thèmes variés (cinéma, sport, histoire, art...) pour tester ses connaissances.
+                    Ce projet a été le premier projet personnel au début de ma formation DWWM, il n'est plus en ligne aujourd'hui car il va prochainement évolué.  
                 </p>
             </div>
 
@@ -44,12 +44,9 @@
                 <ul>
                     <li>Création de comptes utilisateurs</li>
                     <li>Authentification sécurisée</li>
-                    <li>Recherche de jeux avec filtre dynamique</li>
-                    <li>Ajout de jeux dans une wishlist</li>
-                    <li>Consultation et rédaction d'avis (note et commentaire)</li>
-                    <li>Gestion des jeux par l'administrateur</li>
-                    <li>Gestion des utilisateurs par l'administrateur</li>
-                    <li>Forum de discussion entre utilisateurs</li>
+                    <li>Choix de quiz et génération de questions aléatoires</li>
+                    <li>Timer pour un temps de réflexion limité</li>
+                    <li>Score selon les bonnes réponses données</li>
                     <li>Stockage de données de manière sécurisée</li>
                     <li>Accessibilité grâce au responsive et à l’ergonomie.</li>
                 </ul>
@@ -59,9 +56,9 @@
             <div class="project-section mb-4">
                 <h2>Galerie</h2>
                 <div class="row g-3">
-                    <div class="col-md-4"><img src="/assets/img/projects/Gameez/img1.webp" class="img-fluid rounded" alt="Capture écran accueil du site Ecoride"></div>
-                    <div class="col-md-4"><img src="/assets/img/projects/Gameez/img2.webp" class="img-fluid rounded" alt="Capture écran proposition de trajet sur le site Ecoride"></div>
-                    <div class="col-md-4"><img src="/assets/img/projects/Gameez/img3.webp" class="img-fluid rounded" alt="Capture écran dashboard administrateur"></div>
+                    <div class="col-md-4"><img src="/assets/img/projects/Ludiquiz/img1.webp" class="img-fluid rounded" alt="Capture écran accueil du site Ecoride"></div>
+                    <div class="col-md-4"><img src="/assets/img/projects/Ludiquiz/img2.webp" class="img-fluid rounded" alt="Capture écran proposition de trajet sur le site Ecoride"></div>
+                    <div class="col-md-4"><img src="/assets/img/projects/Ludiquiz/img3.webp" class="img-fluid rounded" alt="Capture écran dashboard administrateur"></div>
                 </div>
             </div>
 
@@ -74,10 +71,9 @@
                     <li>Organisation et gestion de projet : Utilisation d'outil comme Trello ou Notion.</li>
                     <li>Design : Maquettage, choix de la charte graphique, responsive, ergonomie.</li>
                     <li>Gestion des utilisateurs : Création de compte, gestion sécurisé des informations personnelles, gestion des accès.</li>
-                    <li>Gestion base de données : SQL pour les jeux, NoSQL pour le forum. Manipulation de jointure pour les lien entre les jeux et leurs extensions.</li>
-                    <li>Gestion filtre dynamique : Les résultats des jeux se met à jour en temps réél.</li>
-                    <li>Clareté du code : Structure MVC pour faciliter la clareté et donc la maintenabilité du code.</li>
-                    <li>Sécurité du code : Utilisation de requêtes préparées, hash de mot de passe, token CSRF, sécurisation des input pour contrer les failles connues. Utilisation d'outils dédié à la sécurité comme SonarQube.</li>
+                    <li>Gestion base de données : SQL pour gérer les données volumineuses des questions avec leurs propositions de réponses associées.</li>
+                    <li>Gestion du timer avec Javascript</li>
+                    <li>Sécurité du code : Utilisation de requêtes préparées, hash de mot de passe, sécurisation des input pour contrer les failles connues.</li>
                     
                 </ul>
             </div>
@@ -88,19 +84,18 @@
                 <div class="tech-tags mt-2 display-flex flex-wrap">
                     <span class="tech">HTML5</span>
                     <span class="tech">CSS3</span>
+                    <span class="tech">Tailwind</span>
                     <span class="tech">Javascript</span>
                     <span class="tech">PHP 8.3</span>
                     <span class="tech">MySQL</span>
-                    <span class="tech">MongoDB</span>
                     <span class="tech">Docker</span>
-                    <span class="tech">Heroku</span>
                 </div>
             </div>
 
             <!-- Liens -->
             <div class="project-links text-center my-4">
-                <a href="https://gameez-app-565abf2c252a.herokuapp.com/" target="_blank" class="btn btn-primary me-2">Voir le site en ligne</a>
-                <a href="https://github.com/Gwladyslsn/gameez" target="_blank" class="btn btn-outline-secondary">Code sur GitHub</a>
+                <div href="https://gameez-app-565abf2c252a.herokuapp.com/" target="_blank" class="btn btn-primary me-2">Ce projet n'est plus en ligne pour le moment</div>
+                <a href="https://github.com/Gwladyslsn/quiz" target="_blank" class="btn btn-outline-secondary">Code sur GitHub</a>
             </div>
 
         </div>
