@@ -24,10 +24,10 @@ header {
   border-bottom: 1px solid #1a222f;
 }
 
-.bg {
-  background-color: #050815;
+nav {
+  width: 100%;
+  padding: 1rem 0;
 }
-
 nav a {
   color: #ffffff;
   transition: color 0.3s ease;
@@ -36,6 +36,61 @@ nav a:hover {
   color: #aaa5ff !important;
 }
 
+/* Photo du navbar - responsive */
+.navbar-photo {
+  width: clamp(40px, 8vw, 60px);
+  height: clamp(40px, 8vw, 60px);
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* DESKTOP - logo gauche, menu centre, CV droite */
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+  .navbar-collapse {
+    flex-grow: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar-toggler {
+    display: none !important;
+  }
+  .btn-primary {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+}
+/* MOBILE - logo gauche, burger centre, menu par dessous */
+@media (max-width: 991px) {
+  .navbar-brand {
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+  .navbar-collapse {
+    position: static;
+    width: 100%;
+    flex-basis: 100%;
+    background-color: #050815;
+    border-bottom: 1px solid #1a222f;
+    box-shadow: 0 4px 12px rgba(170, 165, 255, 0.2);
+  }
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0;
+    gap: 0.5rem !important;
+    background-color: rgba(85, 25, 139, 0.15);
+  }
+  .navbar-toggler {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+}
 header .btn-primary {
   background-color: #55198b;
   border-color: #55198b;

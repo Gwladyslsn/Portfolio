@@ -28,13 +28,10 @@ header {
     border-bottom: 1px solid $border-light;
 }
 
-.bg {
-    background-color: $bg-primary;
-}
-
-
 nav {
-    
+    width: 100%;
+    padding: 1rem 0;
+
     a {
         color: $text-light;
         transition: color $transition-base;
@@ -45,6 +42,69 @@ nav {
     }
 }
 
+/* Photo du navbar - responsive */
+.navbar-photo {
+    width: clamp(40px, 8vw, 60px);
+    height: clamp(40px, 8vw, 60px);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* DESKTOP - logo gauche, menu centre, CV droite */
+@media (min-width: 992px) {
+    .navbar-brand {
+        margin-right: 0;
+        flex-shrink: 0;
+    }
+
+    .navbar-collapse {
+        flex-grow: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    .btn-primary {
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+}
+
+/* MOBILE - logo gauche, burger centre, menu par dessous */
+@media (max-width: 991px) {
+    .navbar-brand {
+        margin-right: 0;
+        flex-shrink: 0;
+    }
+
+    .navbar-collapse {
+        position: static;
+        width: 100%;
+        flex-basis: 100%;
+        background-color: $bg-primary;
+        border-bottom: 1px solid $border-light;
+        box-shadow: 0 4px 12px rgba($secondary, 0.2);
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        gap: 0.5rem !important;
+        background-color: rgba($primary, 0.15);
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+
+}
 
 header .btn-primary {
     background-color: $primary;
@@ -99,6 +159,7 @@ section {
     }
 
     section {
+
         &.presentation,
         &.section-project,
         &.section-contact {
@@ -125,6 +186,7 @@ section {
     }
 
     section {
+
         &.presentation,
         &.section-project,
         &.section-contact {

@@ -1,28 +1,42 @@
 <body>
     <!-- HEADER -->
-    <header class="d-flex flex-wrap align-items-center justify-content-between pt-3 pb-3">
-        <div class="col-md-3 mb-md-0 mb-3">
-            <a href="../../index.html" class="d-inline-flex text-decoration-none text-white fs-5 fw-500">
-                Gwladys Laisné
-            </a>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav col-12 col-md-auto mb-md-0 mb-3 justify-content-center gap-md-0 gap-3">
-                    <li><a href="/index.html#section-home" class="text-white nav-link px-md-4">Présentation</a></li>
-                    <li><a href="/index.html#skills-section" class="text-white nav-link px-md-4">Compétences</a></li>
-                    <li><a href="/index.html#section-project" class="text-white nav-link px-md-4">Projets</a></li>
-                    <li><a href="/index.html#section-contact" class="text-white nav-link px-md-4">Contact</a></li>
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                
+                <!-- Logo à gauche -->
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/assets/img/portrait.jpg" alt="Photo" class="navbar-photo">
+                </a>
+
+                <!-- Menu au centre (desktop) -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto gap-3">
+                        <li class="nav-item">
+                            <a href="/index.html#section-home" class="nav-link">Présentation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/index.html#skills-section" class="nav-link">Compétences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/index.html#section-project" class="nav-link">Projets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/index.html#section-contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CV à droite (desktop) -->
+                <a href="/assets/doc/CV_GwladysLaisne.pdf" download class="btn btn-primary btn-sm ms-auto">
+                    CV <i class="fa-solid fa-download ms-2"></i>
+                </a>
+
+                <!-- Burger (mobile) -->
+                <button class="navbar-toggler border-0 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
             </div>
         </nav>
-        <div class="col-md-3 text-end">
-    <a href="/assets/doc/CV_GwladysLaisne.pdf" download class="btn btn-primary">
-        CV <i class="fa-solid fa-download ms-2"></i>
-    </a>
-</div>
     </header>
